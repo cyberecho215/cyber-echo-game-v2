@@ -1,5 +1,4 @@
 window.onload = function() {
-  // ====== DEBUGGING ======
   const grid = document.getElementById("grid");
   const info = document.getElementById("info");
 
@@ -8,10 +7,9 @@ window.onload = function() {
 
   if (!grid || !info) {
     console.error("Grid or info element not found. Check your index.html IDs!");
-    return; // Stop execution if elements are missing
+    return;
   }
 
-  // ====== GAME LOGIC ======
   const size = 8;
   let turn = 1;
 
@@ -27,11 +25,13 @@ window.onload = function() {
         const cell = document.createElement("div");
         cell.className = "cell";
 
-        if (players[1].x === x && players[1].y === y)
+        if (players[1].x === x && players[1].y === y) {
           cell.innerHTML = "<span class='p1'>P1</span>";
+        }
 
-        if (players[2].x === x && players[2].y === y)
+        if (players[2].x === x && players[2].y === y) {
           cell.innerHTML = "<span class='p2'>P2</span>";
+        }
 
         grid.appendChild(cell);
       }
