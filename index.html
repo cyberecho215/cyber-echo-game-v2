@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cyber Echo</title>
 
+<style>
+body {
+  background: black;
+  color: #00aaff;
+  text-align: center;
+  font-family: Arial;
+}
+
+#info {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background: #222;
+  border: 2px solid #00aaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.p1 { color: red; }
+.p2 { color: lime; }
+
+button {
+  background: #00aaff;
+  border: none;
+  padding: 10px 14px;
+  margin: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Cyber Echo</h1>
+<div id="info"></div>
+<div id="grid"></div>
+
+<div>
+  <button onclick="move('up')">⬆️</button><br>
+  <button onclick="move('left')">⬅️</button>
+  <button onclick="move('right')">➡️</button><br>
+  <button onclick="move('down')">⬇️</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
