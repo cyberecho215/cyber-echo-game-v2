@@ -1,8 +1,18 @@
 window.onload = function() {
-  const size = 8;
+  // ====== DEBUGGING ======
   const grid = document.getElementById("grid");
   const info = document.getElementById("info");
 
+  console.log("grid element:", grid);
+  console.log("info element:", info);
+
+  if (!grid || !info) {
+    console.error("Grid or info element not found. Check your index.html IDs!");
+    return; // Stop execution if elements are missing
+  }
+
+  // ====== GAME LOGIC ======
+  const size = 8;
   let turn = 1;
 
   const players = {
